@@ -5,7 +5,8 @@ import { buildDossier } from './vendor/makefun-game.ts';
 const root = dirname(fileURLToPath(import.meta.url));
 const output = resolve(process.env.MAKEFUN_OUTPUT_DIR || '/output');
 const gameDir = join(root, 'game');
-if (!existsSync(gameDir) || !statSync(gameDir).isDirectory()) throw new Error(`Game directory is missing: ${gameDir}`);
+if (!existsSync(gameDir)) throw new Error(`Game directory is missing: ${gameDir}`);
+if (!statSync(gameDir).isDirectory()) throw new Error(`Game path is not a directory: ${gameDir}`);
 mkdirSync(output, { recursive: true });
 for (const directory of ['game', 'screenshots']) {
   mkdirSync(join(output, directory), { recursive: true });

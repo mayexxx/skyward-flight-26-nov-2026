@@ -6,4 +6,4 @@ Skyward Flight is an original flight game written in this session. Fly in chase 
 
 ## Run it locally
 
-From the repository root, run `python3 -m http.server 8080 --directory game`, then open http://localhost:8080 in a desktop browser. Use the arrow keys to fly, Shift and Ctrl to adjust throttle, and the mouse to steer. Press V to change view, P to pause, and R to restart after a landing or crash.
+From the repository root, run `python3 -m http.server 8080 --directory game`, then open http://localhost:8080 in a desktop browser. Use the arrow keys to fly, Shift and Ctrl to adjust throttle, and the mouse to steer; the mouse wheel also adjusts throttle. Press V to change view, P to pause, and R to restart after a landing or crash.
